@@ -1,14 +1,12 @@
 <?php
 
-
 use PHPUnit\Framework\TestCase;
-
-class OnlyTest extends TestCase
+class ArrayTest extends TestCase
 {
-    public function testOnly()
+    public function testArray()
     {
-        $collect = new Collect\Collect(['a' => 112, 'b' => 222, 'c' => 366, 'd' => 666]);
-        $this->assertSame(['a' => 112, 'c' => 366, 'd' => 666], $collect->only(['a', 'c', 'd'])->toArray());
+        $collect = new Collect\Collect(['a' => 1, 'b' => 2, 'c' => 3]);
+        $this->assertSame(['a' => 1, 'b' => 2, 'c' => 3], $collect->toArray());
     }
 
 }
